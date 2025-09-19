@@ -84,6 +84,12 @@ body {
     font-size: 1.75rem;
 }
 
+.logo-img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
 .nav-menu {
     display: flex;
     gap: 2rem;
@@ -783,6 +789,12 @@ body {
 
 .footer-logo i {
     color: var(--primary-color);
+}
+
+.footer-logo .logo-img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
 }
 
 .footer-section h4 {
