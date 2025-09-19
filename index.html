@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImmoPro - Plateforme Immobilière Commerciale</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-building"></i>
+                    <span>ImmoPro</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#accueil" class="nav-link">Accueil</a>
+                    <a href="#recherche" class="nav-link">Rechercher</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Trouvez votre local commercial idéal</h1>
+                <p class="hero-subtitle">Spécialisé dans les bars, tabacs et restaurants - Mise en relation rapide et professionnelle</p>
+                <div class="hero-search">
+                    <div class="search-form">
+                        <div class="search-input-group">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" placeholder="Ville, région..." class="search-input">
+                        </div>
+                        <div class="search-input-group">
+                            <i class="fas fa-tag"></i>
+                            <select class="search-select">
+                                <option value="">Type de commerce</option>
+                                <option value="bar">Bar</option>
+                                <option value="tabac">Tabac</option>
+                                <option value="restaurant">Restaurant</option>
+                            </select>
+                        </div>
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                            Rechercher
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-card">
+                    <i class="fas fa-store"></i>
+                    <h3>+500</h3>
+                    <p>Locaux disponibles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Nos spécialités</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="bar">
+                    <div class="category-icon">
+                        <i class="fas fa-wine-glass-alt"></i>
+                    </div>
+                    <h3>Bars</h3>
+                    <p>Locaux parfaits pour votre bar avec terrasse et visibilité</p>
+                    <span class="category-count">120+ locaux</span>
+                </div>
+                <div class="category-card" data-category="tabac">
+                    <div class="category-icon">
+                        <i class="fas fa-smoking"></i>
+                    </div>
+                    <h3>Tabacs</h3>
+                    <p>Emplacements stratégiques pour votre bureau de tabac</p>
+                    <span class="category-count">85+ locaux</span>
+                </div>
+                <div class="category-card" data-category="restaurant">
+                    <div class="category-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Restaurants</h3>
+                    <p>Espaces adaptés pour votre restaurant ou fast-food</p>
+                    <span class="category-count">200+ locaux</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="recherche" class="search-section">
+        <div class="container">
+            <h2 class="section-title">Recherche avancée</h2>
+            <div class="search-filters">
+                <div class="filter-group">
+                    <label>Localisation</label>
+                    <input type="text" placeholder="Ville, code postal..." class="filter-input">
+                </div>
+                <div class="filter-group">
+                    <label>Type de commerce</label>
+                    <select class="filter-select">
+                        <option value="">Tous</option>
+                        <option value="bar">Bar</option>
+                        <option value="tabac">Tabac</option>
+                        <option value="restaurant">Restaurant</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Surface (m²)</label>
+                    <div class="range-inputs">
+                        <input type="number" placeholder="Min" class="filter-input">
+                        <span>-</span>
+                        <input type="number" placeholder="Max" class="filter-input">
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>Loyer (€/mois)</label>
+                    <div class="range-inputs">
+                        <input type="number" placeholder="Min" class="filter-input">
+                        <span>-</span>
+                        <input type="number" placeholder="Max" class="filter-input">
+                    </div>
+                </div>
+                <button class="filter-btn">Appliquer les filtres</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Grid -->
+    <section class="properties">
+        <div class="container">
+            <div class="properties-header">
+                <h2 class="section-title">Locaux disponibles</h2>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="properties-grid" id="properties-grid">
+                <!-- Properties will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Nos services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Recherche personnalisée</h3>
+                    <p>Notre équipe trouve le local parfait selon vos critères spécifiques</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Négociation</h3>
+                    <p>Nous négocions les meilleures conditions pour votre bail commercial</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Accompagnement juridique</h3>
+                    <p>Assistance complète pour tous les aspects légaux de votre installation</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Rénovation</h3>
+                    <p>Réseau de professionnels pour adapter le local à votre activité</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Contactez-nous</h2>
+                    <p>Notre équipe d'experts est à votre disposition pour vous accompagner dans votre projet</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>01 23 45 67 89</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@immopro.fr</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Avenue des Champs-Élysées, 75008 Paris</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nom" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Téléphone" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-select" required>
+                            <option value="">Type de projet</option>
+                            <option value="bar">Bar</option>
+                            <option value="tabac">Tabac</option>
+                            <option value="restaurant">Restaurant</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Message" class="form-textarea" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="form-btn">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-building"></i>
+                        <span>ImmoPro</span>
+                    </div>
+                    <p>Votre partenaire de confiance pour l'immobilier commercial spécialisé dans les bars, tabacs et restaurants.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#recherche">Rechercher</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Types de commerce</h4>
+                    <ul>
+                        <li><a href="#bar">Bars</a></li>
+                        <li><a href="#tabac">Tabacs</a></li>
+                        <li><a href="#restaurant">Restaurants</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> 01 23 45 67 89</p>
+                        <p><i class="fas fa-envelope"></i> contact@immopro.fr</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ImmoPro. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
